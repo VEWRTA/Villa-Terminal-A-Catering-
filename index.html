@@ -180,6 +180,11 @@
     grid-column: 1 / -1; margin-top: 6px; background: var(--orange-tint); border-left: 3px solid var(--brand);
     padding: 8px 12px; border-radius: 0 8px 8px 0; font-size: .92rem; color: var(--orange-dark); font-weight: 600;
   }
+  .menu-item { align-content: start; }
+  .menu-item .promo-tag {
+    display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 999px; background: var(--orange);
+    color: #fff; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; vertical-align: 1px;
+  }
   .menu-grid.compact .menu-item { padding: 16px 22px; }
   .menu-footnote { margin-top: 40px; text-align: center; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
@@ -419,8 +424,11 @@
         <div class="category-title"><h3 id="cat-mains">Main Entr&eacute;es</h3></div>
         <ul class="menu-grid">
           <li class="menu-item"><h4>Chicken Marsala</h4><span class="price">$110</span><p class="desc">Fresh boneless chicken breasts, lightly seasoned and saut&eacute;ed with Marsala wine, fresh garlic, chicken stock, and mushrooms.</p></li>
-          <li class="menu-item"><h4>Shake Shack Burger &amp; Fries</h4><span class="price">$208</span><p class="desc">Juicy, griddled beef patty topped with melted American cheese, crisp lettuce, fresh tomato, and signature Shack-style sauce, served on a soft, toasted potato bun. (20 Burgers)</p><p class="promo">PROMOTION: Buy 20 burgers, get 5 complimentary orders of fries.</p></li>
-          <li class="menu-item"><h4>Shake Shack Burger &amp; Fries</h4><span class="price">$104</span><p class="desc">Juicy, griddled beef patty topped with melted American cheese, crisp lettuce, fresh tomato, and signature Shack-style sauce, served on a soft, toasted potato bun. (10 Burgers)</p></li>
+          <li class="menu-item">
+            <h4>Shake Shack Burger</h4><span class="price">$104 / $208</span>
+            <p class="desc">Juicy, griddled beef patty topped with melted American cheese, crisp lettuce, fresh tomato, and signature Shack-style sauce, served on a soft, toasted potato bun. (10 Burgers) (20 Burgers)</p>
+            <p class="promo"><span class="promo-tag">Promotion</span> Buy 20 burgers, get 5 complimentary orders of fries.</p>
+          </li>
           <li class="menu-item"><h4>Shake Shack Fries</h4><span class="price">$52</span><p class="desc">10 Fries</p></li>
           <li class="menu-item"><h4>Italian-Style Meatballs Platter</h4><span class="price">$180</span><p class="desc">All-beef meatballs gently simmered in marinara sauce. (180 Meatballs)</p></li>
           <li class="menu-item"><h4>Penne Marinara Sauce</h4><span class="price">$60</span><p class="desc">Pasta with marinara sauce, garnished with fresh basil and Parmesan cheese. Serves 10&ndash;15.</p></li>
