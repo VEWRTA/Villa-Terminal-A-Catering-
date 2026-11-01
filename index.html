@@ -186,6 +186,23 @@
     color: #fff; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; vertical-align: 1px;
   }
   .menu-grid.compact .menu-item { padding: 16px 22px; }
+  .menu-head { max-width: none; }
+  .menu-notes { display: flex; flex-wrap: wrap; gap: 12px; align-items: stretch; margin-top: 18px; }
+  .menu-notes .pricing-note { margin-top: 0; }
+  .category-nav a.chip-allergy { background: var(--orange-tint); border-color: var(--orange-line); color: var(--orange-dark); }
+  .category-nav a.chip-allergy:hover { border-color: var(--orange); }
+  .allergy-advisory {
+    margin-top: 28px; display: flex; gap: 18px; align-items: flex-start; scroll-margin-top: 150px;
+    background: var(--orange-tint); border: 2px solid var(--orange-line); border-left: 6px solid var(--brand);
+    border-radius: var(--radius); padding: 26px 28px;
+  }
+  .advisory-icon { flex: none; width: 48px; height: 48px; border-radius: 50%; background: #fff; color: var(--orange); display: grid; place-items: center; border: 1px solid var(--orange-line); }
+  .allergy-advisory h3 { font-size: 1.2rem; color: var(--orange-dark); margin-bottom: 10px; }
+  .allergy-advisory p { color: var(--ink); margin-bottom: 10px; font-size: 1rem; }
+  .allergy-advisory .advisory-sign { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--orange-line); font-weight: 600; color: var(--orange-dark); font-size: .95rem; }
+  @media (max-width: 640px) {
+    .allergy-advisory { flex-direction: column; gap: 12px; padding: 20px; }
+  }
   .menu-footnote { margin-top: 40px; text-align: center; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 
   /* ---------- Gallery ---------- */
@@ -377,13 +394,15 @@
   <!-- ================= MENU ================= -->
   <section class="menu-section" id="menu" aria-labelledby="menu-title">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head menu-head">
         <span class="eyebrow">Villa Terminal A</span>
         <h2 id="menu-title">Catering Menu</h2>
+        <div class="menu-notes">
         <p class="pricing-note">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
           All prices are plus tax &amp; service charge.
         </p>
+        </div>
       </div>
 
       <nav class="category-nav" aria-label="Menu categories">
@@ -394,6 +413,7 @@
           <li><a href="#sides">Sides</a></li>
           <li><a href="#desserts">Desserts</a></li>
           <li><a href="#beverages">Beverages</a></li>
+          <li><a class="chip-allergy" href="#allergy-advisory">Allergy Info</a></li>
         </ul>
       </nav>
 
@@ -429,7 +449,7 @@
             <p class="desc">Juicy, griddled beef patty topped with melted American cheese, crisp lettuce, fresh tomato, and signature Shack-style sauce, served on a soft, toasted potato bun. (10 Burgers) (20 Burgers)</p>
             <p class="promo"><span class="promo-tag">Promotion</span> Buy 20 burgers, get 5 complimentary orders of fries.</p>
           </li>
-          <li class="menu-item"><h4>Shake Shack Fries</h4><span class="price">$52</span><p class="desc">10 Fries</p></li>
+          <li class="menu-item"><h4>Shake Shack Fries</h4><span class="price">$52</span><p class="desc">Crispy crinkle-cut fries (10 Fries).</p></li>
           <li class="menu-item"><h4>Italian-Style Meatballs Platter</h4><span class="price">$180</span><p class="desc">All-beef meatballs gently simmered in marinara sauce. (180 Meatballs)</p></li>
           <li class="menu-item"><h4>Penne Marinara Sauce</h4><span class="price">$60</span><p class="desc">Pasta with marinara sauce, garnished with fresh basil and Parmesan cheese. Serves 10&ndash;15.</p></li>
           <li class="menu-item"><h4>Mac and Cheese</h4><span class="price">$55</span><p class="desc">A rich, creamy combination of cheddar, mozzarella, and Romano cheese. Serves 10&ndash;15.</p></li>
@@ -477,6 +497,18 @@
       </div>
 
       <p class="menu-footnote">Villa Terminal A Catering &bull; Menu pricing and availability subject to confirmation</p>
+
+      <aside class="allergy-advisory" id="allergy-advisory" aria-labelledby="allergy-advisory-title">
+        <div class="advisory-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+        <div>
+          <h3 id="allergy-advisory-title">Food Allergy &amp; Dietary Advisory:</h3>
+          <p>Your safety is important to us. Our menu items may contain or come into contact with common food allergens, including milk, eggs, wheat, soy, peanuts, tree nuts, fish, shellfish, and sesame. Please be aware that our food is prepared in kitchens where multiple allergens may be present. Although we take precautions during food preparation, we cannot guarantee that any menu item is completely free from allergens or cross-contact.</p>
+          <p>If you or anyone in your group has a food allergy or dietary restriction, please inform our catering team before placing your order. Our team will do its best to provide available ingredient and allergen information and discuss suitable menu options.</p>
+          <p class="advisory-sign">Villa Restaurant Group &mdash; Terminal A Catering<br>Newark Liberty International Airport (EWR)</p>
+        </div>
+      </aside>
     </div>
   </section>
 
